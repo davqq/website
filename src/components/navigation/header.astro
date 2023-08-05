@@ -1,0 +1,40 @@
+<header class="fixed z-50 mt-11 px-20 w-full">
+  <div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold underlines hover:opacity-100">
+      <a href="/">David.</a>
+    </h1>
+
+    <nav class="justify-center space-x-10 text-sm">
+      <a
+        class="rounded-lg font-bold"
+        href="/"
+        >Home</a
+      >
+      <a
+        class="rounded-lg font-medium opacity-50 hover:opacity-100"
+        href="#"
+        >About</a
+      >
+      <a
+        class="rounded-lg font-medium opacity-50 hover:opacity-100"
+        href="#"
+        >Projects</a
+      >
+      <a
+        class="rounded-lg font-medium opacity-50 hover:opacity-100"
+        href="#"
+        >Contact</a
+      >
+    </nav>
+
+    <a
+      aria-label="email"
+      class="rounded-3xl bg-blue-600 text-sm px-3 py-2 text-white font-semibold"
+      href="/mail"
+      target="_blank"
+    >
+      Let's Talk
+      <slot />
+    </a>
+  </div>
+</header>

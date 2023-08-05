@@ -1,0 +1,129 @@
+---
+import Header from "../navigation/header.astro";
+
+export interface Props {
+  title: string;
+  header: boolean;
+}
+
+const { title, header } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://davq.de/#localBusiness",
+  name: "davqq - developer",
+  slogan: "Elevate your web presence",
+  url: "https://davq.de",
+  email: "contact@davq.de",
+  image: "https://davq.de/logo.png",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Magnolienweg 18a",
+    addressLocality: "Frisoythe",
+    postalCode: "26169",
+    addressCountry: "DE",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 53.0303684,
+    longitude: 7.8480314,
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ],
+    opens: "00:00",
+    closes: "23:59",
+  },
+  sameAs: ["https://github.com/davqq"],
+  currenciesAccepted: "EUR",
+  founder: {
+    givenName: "David",
+    familyName: "von Garrel",
+    jobTitle: "Developer",
+    gender: "Male",
+    knowsLanguage: ["de-DE", "en-US"],
+  },
+  foundingDate: "2022-01-01",
+  foundingLocation: {
+    name: "Friesoythe",
+  },
+  knowsLanguage: ["de-DE", "en-US"],
+  priceRange: "$$",
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width"
+      name="viewport"
+    />
+    <meta
+      content="text/html; charset=UTF-8"
+      http-equiv="content-type"
+    />
+    <meta
+      content="default-src * 'self' 'unsafe-eval' 'unsafe-inline'"
+      http-equiv="Content-Security-Policy"
+    />
+    <meta
+      content="davq.de"
+      property="og:site_name"
+    />
+    <link
+      href="/favicon.svg"
+      rel="icon"
+      type="image/svg+xml"
+    />
+    <script
+      set:html={JSON.stringify(schema)}
+      type="application/ld+json"
+    />
+    <meta
+      content={Astro.generator}
+      name="generator"
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    {header && <Header />}
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      #da62c4 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background-color: #f6f6f6;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+</style>
