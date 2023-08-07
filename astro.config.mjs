@@ -3,7 +3,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://davqq.de/",
+  site: "https://davq.de/",
   integrations: [tailwind()],
   output: "static",
   compressHTML: true,
@@ -18,11 +18,7 @@ export default defineConfig({
     },
     "/mail": {
       status: 302,
-      destination: "mailto:contact@davqq.de",
-    },
-    phonenumber: {
-      status: 302,
-      destination: "tel:+4915735988888",
+      destination: "mailto:contact@davq.de",
     },
   },
 });
