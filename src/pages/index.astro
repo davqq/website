@@ -6,47 +6,47 @@ import Layout from "../components/layout/layout.astro";
   header
   title="David von Garrel"
 >
-  <main class="flex flex-col pt-48">
-    <section class="flex text-5xl justify-center pt-40 items-center">
+  <main class="flex flex-col pt-20">
+    <section class="flex text-5xl justify-center pt-32 items-center">
       <h1 class="font-bold text-center px-10 max-w-4xl">
         I'm <span class="text-blue-600">David</span>. I will create a design
         that can give value to your business.
       </h1>
     </section>
 
-    <section class="w-full bg-blue-950 text-white mt-56 pb-40">
+    <section class="w-full bg-blue-950 text-white mt-40 pb-40">
       <div
-        class="flex w-full space-x-32 px-10 justify-center mt-12 items-center"
+        class="flex flex-col space-y-12 px-10 mt-12 items-center md:space-y-0 md:flex-row md:space-x-32 justify-center"
       >
-        <div class="flex flex-row items-center">
+        <div class="flex flex-col items-center md:flex-row">
           <img
             alt="c#"
             class="h-16"
             src="/csharp.svg"
           />
-          <div class="flex flex-col ml-2 justify-center">
+          <div class="flex flex-col mt-2 md:ml-2">
             <strong class="font-bold text-2xl">C#</strong>
             <span class="text-gray-400">3 Year's Experience</span>
           </div>
         </div>
-        <div class="flex flex-row items-center">
+        <div class="flex flex-col items-center md:flex-row">
           <img
             alt="javascript"
             class="h-16"
             src="/javascript.svg"
           />
-          <div class="flex flex-col ml-2 justify-center">
+          <div class="flex flex-col mt-2 md:ml-2">
             <strong class="font-bold text-2xl">Javascript</strong>
             <span class="text-gray-400">2 Year's Experience</span>
           </div>
         </div>
-        <div class="flex flex-row items-center">
+        <div class="flex flex-col items-center md:flex-row">
           <img
             alt="python"
             class="h-16"
             src="/python.svg"
           />
-          <div class="flex flex-col ml-2 justify-center">
+          <div class="flex flex-col mt-2 md:ml-2">
             <strong class="font-bold text-2xl">Python</strong>
             <span class="text-gray-400">2 Year's Experience</span>
           </div>
@@ -66,26 +66,19 @@ import Layout from "../components/layout/layout.astro";
 
         <div class="flex w-full justify-center mt-10">
           <a
-            class="flex bg-white rounded-3xl px-10 py-3 text-black font-bold"
+            class="flex bg-white rounded-3xl px-10 py-3 text-black font-bold items-center"
             href="/mail"
           >
             <img
               alt="send"
-              class="h-6 mr-2 justify-center"
-              src="../../public/send.svg"
+              class="h-6 mr-2"
+              src="/send.svg"
             />
 
              Contact me
           </a>
         </div>
       </div>
-    </section>
-
-    <section>
-      <h2 class="text-3xl font-bold text-center mt-10 px-10">
-        I'm a <span class="text-blue-600">UI/UX Designer</span> and{" "}
-        <span class="text-blue-600">Fullstack Developer</span> from Germany.
-      </h2>
     </section>
   </main>
 </Layout>
