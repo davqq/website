@@ -6,13 +6,25 @@ import Layout from "../components/layout/layout.astro";
   header
   title="David von Garrel"
 >
-  <main class="flex flex-col pt-20">
-    <section class="flex text-5xl justify-center pt-32 items-center">
+  <main class="flex flex-col pt-16">
+    <img
+      alt="david"
+      class="flex absolute right-0 top-5 h-40 md:hidden"
+      src="/david_small.png"
+    />
+
+    <section class="flex text-5xl justify-center pt-20 items-center">
       <h1 class="font-bold text-center px-10 max-w-4xl">
         I'm <span class="text-blue-600">David</span>. I will create a design
         that can give value to your business.
       </h1>
     </section>
+
+    <img
+      alt="david"
+      class="absolute hidden md:flex md:right-0 md:h-96 md:top-28 -z-10"
+      src="/david_big.png"
+    />
 
     <section class="w-full bg-blue-950 text-white mt-40 pb-40">
       <div
@@ -24,7 +36,7 @@ import Layout from "../components/layout/layout.astro";
             class="h-16"
             src="/csharp.svg"
           />
-          <div class="flex flex-col mt-2 md:ml-2">
+          <div class="flex flex-col mt-2 md:ml-2 text-center md:text-left">
             <strong class="font-bold text-2xl">C#</strong>
             <span class="text-gray-400">3 Year's Experience</span>
           </div>
@@ -35,7 +47,7 @@ import Layout from "../components/layout/layout.astro";
             class="h-16"
             src="/javascript.svg"
           />
-          <div class="flex flex-col mt-2 md:ml-2">
+          <div class="flex flex-col mt-2 md:ml-2 text-center md:text-left">
             <strong class="font-bold text-2xl">Javascript</strong>
             <span class="text-gray-400">2 Year's Experience</span>
           </div>
@@ -46,7 +58,7 @@ import Layout from "../components/layout/layout.astro";
             class="h-16"
             src="/python.svg"
           />
-          <div class="flex flex-col mt-2 md:ml-2">
+          <div class="flex flex-col mt-2 md:ml-2 text-center md:text-left">
             <strong class="font-bold text-2xl">Python</strong>
             <span class="text-gray-400">2 Year's Experience</span>
           </div>
@@ -66,7 +78,7 @@ import Layout from "../components/layout/layout.astro";
 
         <div class="flex w-full justify-center mt-10">
           <a
-            class="flex bg-white rounded-3xl px-10 py-3 text-black font-bold items-center"
+            class="flex bg-white rounded-3xl px-10 py-3 text-black font-bold items-center hover:bg-gray-200 transition-all"
             href="/mail"
           >
             <img
