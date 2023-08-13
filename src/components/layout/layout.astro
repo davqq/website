@@ -1,12 +1,14 @@
 ---
+import Footer from "../navigation/footer.astro";
 import Header from "../navigation/header.astro";
 
 export interface Props {
   title: string;
   header: boolean;
+  footer: boolean;
 }
 
-const { title, header } = Astro.props;
+const { title, header, footer } = Astro.props;
 
 const schema = {
   "@context": "https://schema.org",
@@ -97,6 +99,7 @@ const schema = {
   <body>
     {header && <Header />}
     <slot />
+    {footer && <Footer />}
   </body>
 </html>
 <style is:global>
