@@ -3,6 +3,7 @@ import Layout from "../components/layout/layout.astro";
 ---
 
 <Layout
+  footer={false}
   header
   title="Page not Found"
 >
@@ -10,7 +11,7 @@ import Layout from "../components/layout/layout.astro";
     class="flex items-center justify-center h-[80vh] animate-in fade-in duration-1000"
   >
     <div class="mx-10 text-left">
-      <h1 class="text-4xl font-bold">Page not Found</h1>
+      <h1 class="text-4xl">Page not Found</h1>
       <p class="my-3 text-xl"
         >Sorry, we couldn't find the page you were looking for.</p
       >
