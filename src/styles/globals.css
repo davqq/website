@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-  @apply font-outfit-bold;
+  @apply font-outfit-bold text-3xl;
 }
 
 h2 {
@@ -24,5 +24,5 @@ h6 {
 }
 
 p {
-  @apply font-roboto-light;
+  @apply font-roboto-light text-xl;
 }
