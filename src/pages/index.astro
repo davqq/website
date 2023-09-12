@@ -8,41 +8,50 @@ import Layout from "../components/layout/layout.astro";
   title="David von Garrel"
 >
   <main
-    class="flex flex-col pt-32 md:pt-64 animate-fade-down  fade-in duration-1000 justify-center items-center"
+    class="fade-in flex animate-fade-down flex-col items-center justify-center pt-32 duration-1000 md:pt-64"
   >
-    <section class="flex flex-col px-10 max-w-4xl w-full">
-      <h1 class="text-5xl  animate-duration-1000 -tracking-wide">
+    <section
+      class="flex w-full max-w-4xl flex-col px-10"
+      id="home"
+    >
+      <h1 class="text-5xl -tracking-wide animate-duration-1000">
         I'm <span class="text-blue-600">David</span>. I will create a design
         that can give value to your business.
       </h1>
 
-      <p class="text-xl mt-8">
+      <p class="mt-8 text-xl">
         I'm a dedicated developer with a knack for crafting visually captivating
         and practical websites.
       </p>
 
-      <p class="text-xl mt-3">
+      <p class="mt-3 text-xl">
         My goal is to deliver websites that perfectly align with my clients'
         distinct requirements. Specializing in both design and development, I
         offer a range of services including optimization.
       </p>
-      
-      <a class="mt-3 text-xl decoration-gray-400 underline underline-offset-4 hover:decoration-black duration-500 decoration-from-font font-roboto-light" href="/mail">
+
+      <a
+        class="mt-3 w-fit font-roboto-light text-xl underline decoration-gray-400 decoration-from-font underline-offset-4 duration-500 hover:decoration-black"
+        href="/mail"
+      >
         Hire Me
       </a>
     </section>
 
-    <section class="flex flex-col mt-20 px-10 max-w-4xl w-full">
+    <section
+      class="mt-20 flex w-full max-w-4xl flex-col px-10"
+      id="about"
+    >
       <h2 class="text-3xl">About</h2>
-      <p class="text-xl mt-2">
+      <p class="mt-2 text-xl">
         I'm a 19 year old developer from Germany. I'm currently do an
         apprenticeship as an IT specialist for application development at <a
-          class="underline decoration-gray-400 decoration-from-font underline-offset-4  hover:decoration-black duration-500"
+          class="underline decoration-gray-400 decoration-from-font underline-offset-4 duration-500 hover:decoration-black"
           href="https://www.amcon.de"
           >Amcon</a
         >.
       </p>
-      <p class="text-xl mt-2">
+      <p class="mt-2 text-xl">
         I'm passionate about creating beautiful and functional websites. I
         started my journey in 2021 when I created my first application for a
         friend's business. Since then I've been working on various projects
@@ -50,27 +59,30 @@ import Layout from "../components/layout/layout.astro";
       </p>
     </section>
 
-    <section class="flex flex-col mt-20 px-10 max-w-4xl w-full">
+    <section
+      class="mt-20 flex w-full max-w-4xl flex-col px-10"
+      id="projects"
+    >
       <h2 class="text-3xl">Projects</h2>
     </section>
 
-    <section class="flex flex-col mt-20 max-w-4xl w-full">
-      <div class="px-10 mx-10 bg-blue-600 rounded-lg py-10">
+    <section class="mt-20 flex w-full max-w-4xl flex-col">
+      <div class="mx-10 rounded-lg bg-blue-600 px-10 py-10">
         <div class="flex w-full justify-center">
           <h1
-            class="text-white text-4xl text-center animate-fade-down -tracking-wide selection:bg-blue-700"
+            class="animate-fade text-center text-4xl -tracking-wide text-white selection:bg-blue-700"
           >
             Want to work together and create amazing projects with me?
           </h1>
         </div>
 
-        <div class="flex w-full justify-center mt-10">
+        <div class="mt-10 flex w-full justify-center">
           <a
-            class="flex bg-white rounded-3xl px-10 py-3 font-outfit-bold text-black items-center hover:bg-gray-300 transition-all animate-fade-down duration-300"
+            class="flex animate-fade items-center rounded-3xl bg-white px-10 py-3 font-outfit-bold text-black transition-all duration-300 hover:bg-gray-300"
             href="/mail"
           >
             <svg
-              class="h-4 mr-1"
+              class="mr-1 h-4"
               viewBox="0 0 512 512"
               xmlns="http://www.w3.org/2000/svg"
             >
