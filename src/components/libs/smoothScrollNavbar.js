@@ -6,10 +6,17 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     if (this instanceof HTMLAnchorElement && this.hasAttribute("href")) {
       const targetId = this.getAttribute("href").substring(1);
       const targetElement = document.getElementById(targetId);
+      const header = document.getElementById("header");
 
-      if (targetElement !== null) {
+      if (anchor instanceof HTMLAnchorElement) {
+        // change text-decoration with offset and set underline style from font and remove old underline
+        anchor.style.textDecoration = "underline";
+        anchor.style.textUnderlineOffset = "0.2em";
+      }
+
+      if (targetElement !== null && header instanceof HTMLElement) {
         window.scrollTo({
-          top: targetElement.offsetTop,
+          top: targetElement.offsetTop - header.offsetHeight,
           behavior: "smooth",
         });
       }
