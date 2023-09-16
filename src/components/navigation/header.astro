@@ -1,3 +1,11 @@
+---
+export interface Props {
+  showNavbar: boolean;
+}
+
+const { showNavbar } = Astro.props;
+---
+
 <header
   class="fixed z-50 flex w-full animate-fade justify-center px-10 pb-4 pt-11 duration-1000 md:px-20"
   id="header"
@@ -9,34 +17,41 @@
       <a href="/">David.</a>
     </h1>
 
-    <nav
-      class="hidden md:flex"
-      id="navbar"
-    >
-      <ul class="flex">
-        <li class="mr-5">
-          <a
-            class="decoration-from-font opacity-60 transition-opacity duration-300 hover:opacity-100"
-            href="#home"
-            >Home</a
-          >
-        </li>
-        <li class="mr-5">
-          <a
-            class="decoration-from-font opacity-60 transition-opacity duration-300 hover:opacity-100"
-            href="#about"
-            >About</a
-          >
-        </li>
-        <li class="mr-5">
-          <a
-            class="decoration-from-font opacity-60 transition-opacity duration-300 hover:opacity-100"
-            href="#projects"
-            >Projects</a
-          >
-        </li>
-      </ul>
-    </nav>
+    {
+      showNavbar && (
+        <nav
+          class="hidden md:flex"
+          id="navbar"
+        >
+          <ul class="flex">
+            <li class="mr-5">
+              <a
+                class="decoration-from-font opacity-60 transition-opacity duration-300 hover:opacity-100"
+                href="#home"
+              >
+                Home
+              </a>
+            </li>
+            <li class="mr-5">
+              <a
+                class="decoration-from-font opacity-60 transition-opacity duration-300 hover:opacity-100"
+                href="#about"
+              >
+                About
+              </a>
+            </li>
+            <li class="mr-5">
+              <a
+                class="decoration-from-font opacity-60 transition-opacity duration-300 hover:opacity-100"
+                href="#projects"
+              >
+                Projects
+              </a>
+            </li>
+          </ul>
+        </nav>
+      )
+    }
 
     <ul class="flex">
       <li class="mr-3">
