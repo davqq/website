@@ -1,9 +1,12 @@
 ---
+import { useTranslations } from "../../libs/utils.ts";
 export interface Props {
   showNavbar: boolean;
 }
 
 const { showNavbar } = Astro.props;
+
+const translation = useTranslations();
 ---
 
 <header
@@ -29,7 +32,7 @@ const { showNavbar } = Astro.props;
                 class="decoration-from-font opacity-60 transition-opacity duration-300 hover:opacity-100"
                 href="#home"
               >
-                Home
+                {translation("nav.home")}
               </a>
             </li>
             <li class="mr-5">
@@ -37,7 +40,7 @@ const { showNavbar } = Astro.props;
                 class="decoration-from-font opacity-60 transition-opacity duration-300 hover:opacity-100"
                 href="#about"
               >
-                About
+                {translation("nav.about")}
               </a>
             </li>
             <li class="mr-5">
@@ -45,7 +48,7 @@ const { showNavbar } = Astro.props;
                 class="decoration-from-font opacity-60 transition-opacity duration-300 hover:opacity-100"
                 href="#projects"
               >
-                Projects
+                {translation("nav.projects")}
               </a>
             </li>
           </ul>
