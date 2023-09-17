@@ -1,0 +1,28 @@
+@import "./roboto.css";
+@import "./outfit.css";
+
+body {
+  @apply bg-[#f0f0f0] selection:bg-neutral-300;
+}
+
+h1 {
+  @apply font-outfit-bold text-3xl;
+}
+
+h2 {
+  @apply font-outfit-medium;
+}
+
+h3,
+h4 {
+  @apply font-outfit-regular;
+}
+
+h5,
+h6 {
+  @apply font-outfit-light;
+}
+
+p {
+  @apply font-roboto-light text-xl;
+}

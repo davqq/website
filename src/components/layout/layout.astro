@@ -1,4 +1,6 @@
 ---
+import { ViewTransitions } from "astro:transitions";
+import "../../styles/globals.css";
 import Footer from "../navigation/footer.astro";
 import Header from "../navigation/header.astro";
 
@@ -6,9 +8,10 @@ export interface Props {
   title: string;
   header: boolean;
   footer: boolean;
+  showNavbar: boolean;
 }
 
-const { title, header, footer } = Astro.props;
+const { title, header, footer, showNavbar } = Astro.props;
 
 const schema = {
   "@context": "https://schema.org",
@@ -21,6 +24,7 @@ const schema = {
   address: {
     "@type": "PostalAddress",
     streetAddress: "Magnolienweg 18a",
+
     addressLocality: "Frisoythe",
     postalCode: "26169",
     addressCountry: "DE",
@@ -62,7 +66,6 @@ const schema = {
 };
 ---
 
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -80,7 +83,7 @@ const schema = {
     />
     <meta charset="utf-8" />
     <meta
-      content="#fafafa"
+      content="#f0f0f0"
       name="theme-color"
     />
     <meta
@@ -112,37 +115,41 @@ const schema = {
       content={Astro.generator}
       name="generator"
     />
+    <ViewTransitions />
     <title>{title}</title>
   </head>
   <body>
-    {header && <Header />}
+    <script>
+      import "../../libs/smoothScrollNavbar.ts";
+    </script>
+    {header && <Header showNavbar={showNavbar} />}
     <slot />
     {footer && <Footer />}
-  </body>
-</html>
-<style is:global>
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-</style>
+    <style is:global>
+      :root {
+        --accent: 124, 58, 237;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          #da62c4 30%,
+          white 60%
+        );
+      }
+      html {
+        font-family: system-ui, sans-serif;
+        background-color: #f0f0f0;
+      }
+      code {
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+      }
+    </style>
+  </body></html
+>

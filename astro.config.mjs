@@ -8,9 +8,6 @@ export default defineConfig({
   output: "static",
   compressHTML: true,
   trailingSlash: "never",
-  experimental: {
-    assets: true,
-  },
   redirects: {
     "/github": {
       status: 302,
@@ -19,6 +16,10 @@ export default defineConfig({
     "/mail": {
       status: 302,
       destination: "mailto:contact@davq.de",
+    },
+    "/linkedin": {
+      status: 302,
+      destination: "https://www.linkedin.com/in/david-von-garrel-a0952928a/",
     },
   },
 });
