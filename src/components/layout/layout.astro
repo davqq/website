@@ -66,7 +66,6 @@ const schema = {
 };
 ---
 
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -120,12 +119,12 @@ const schema = {
     <title>{title}</title>
   </head>
   <body>
+    <script>
+      import "../../libs/smoothScrollNavbar.ts";
+    </script>
     {header && <Header showNavbar={showNavbar} />}
     <slot />
     {footer && <Footer />}
-    <script>
-      import "../libs/smoothScrollNavbar.ts";
-    </script>
     <style is:global>
       :root {
         --accent: 124, 58, 237;
@@ -138,7 +137,7 @@ const schema = {
       }
       html {
         font-family: system-ui, sans-serif;
-        background-color: #f6f6f6;
+        background-color: #f0f0f0;
       }
       code {
         font-family:

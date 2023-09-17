@@ -12,9 +12,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       const targetElement = document.getElementById(targetId || "");
       const header = document.getElementById("header");
 
-      if (anchor instanceof HTMLAnchorElement) {
-        // change text-decoration with offset and set underline style from font and remove old underline
-      }
       if (targetElement !== null && header instanceof HTMLElement) {
         window.scrollTo({
           top: targetElement.offsetTop - header.offsetHeight,

@@ -9,7 +9,7 @@ import Layout from "../components/layout/layout.astro";
   title="David von Garrel"
 >
   <main
-    class="fade-in flex animate-fade-down flex-col items-center justify-center pt-32 duration-1000 md:pt-64"
+    class="flex animate-fade-down flex-col items-center justify-center pt-32 duration-1000 md:pt-64"
   >
     <section
       class="flex w-full max-w-4xl flex-col px-10"
@@ -66,11 +66,32 @@ import Layout from "../components/layout/layout.astro";
     >
       <h2 class="text-3xl">Projects</h2>
       <div>
-        <h3 class="mt-2 text-xl">Amcon</h3>
+        <h3 class="mt-5 text-xl">
+          <a
+            class="underline decoration-gray-400 decoration-from-font underline-offset-4 duration-500 hover:decoration-black"
+            href="https://www.amcon.de"
+          >
+            Amcon
+          </a></h3
+        >
         <p class="mt-2 text-xl">
-          I'm currently working on a project for my company. It's a web
-          application that allows our customers to manage their products and
-          orders.
+          I'm working on a project for my company. It's a .NET application that
+          allows our customers to manage their products and orders.
+        </p>
+      </div>
+
+      <div class="mt-5">
+        <h3 class="mt-5 text-xl">
+          <a
+            class="underline decoration-gray-400 decoration-from-font underline-offset-4 duration-500 hover:decoration-black"
+            href="https://www.securethepass.com"
+          >
+            Secure The Pass•••
+          </a>
+        </h3>
+        <p class="mt-2 text-xl">
+          Secure The Pass is a password manager that allows you to store your
+          passwords securely. It's a project I'm working on in my free time.
         </p>
       </div>
     </section>
