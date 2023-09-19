@@ -1,6 +1,10 @@
 @import "./roboto.css";
 @import "./outfit.css";
 
+html {
+  @apply text-[4vw] sm:text-[2.4097vw] lg:text-[0.9208333333vw];
+}
+
 body {
   @apply bg-[#f0f0f0] selection:bg-neutral-300;
 }
