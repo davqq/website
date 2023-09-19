@@ -3,6 +3,7 @@ import { ViewTransitions } from "astro:transitions";
 import "../../styles/globals.css";
 import Footer from "../navigation/footer.astro";
 import Header from "../navigation/header.astro";
+import { getLanguage } from "../../libs/utils.ts";
 
 export interface Props {
   title: string;
@@ -66,7 +67,7 @@ const schema = {
 };
 ---
 
-<html lang="en">
+<html lang={getLanguage()}>
   <head>
     <meta charset="UTF-8" />
     <meta
